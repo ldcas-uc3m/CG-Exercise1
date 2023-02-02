@@ -1,35 +1,23 @@
-#include "colors.inc"
-#include "stones.inc"
-#include "textures.inc"
+#include "colors.inc"    // The include files contain
+#include "stones.inc"    // pre-defined scene elements
+#include "textures.inc"    // pre-defined scene elements
 #include "shapes.inc"
 #include "glass.inc"
 #include "metals.inc"
 #include "woods.inc"
-
 #include "vase.inc"
 #include "complexObject.inc"
 
-
-// ROOM
-plane { <0, 1, 0>, 0
-    pigment {
-      checker color Red, color Blue
-    }
-}
-
-plane { <0, 0, 1>, 6
-    pigment {
-      checker color Yellow, color Blue
-    }
-}
+  camera {
+    angle 50
+    location <2, 10, -30>
+    look_at <0, 1, 0>
+  }
 
 
-// OBJECTS
-vase
+//vase
 complexObject
 
-
-// LIGHTS
 light_source {
     <10, 10, -10> // <x, y, z>
     color <1.0, 1.0,  1.0> // <red, green, blue>
@@ -38,10 +26,17 @@ light_source {
     jitter
 }
 
-
-// CAMERA
-camera {
-    location <0, 2, -4>
-    look_at  <0, 2,  0>
+plane { <0, 1, 0>, 0
+    pigment {
+      checker color Red, color Blue
+    }
 }
+
+
+plane { <0, 0, 1>, 70
+    pigment {
+      checker color Yellow, color Blue
+    }
+  }
+
 
