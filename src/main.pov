@@ -6,15 +6,17 @@
 #include "metals.inc"
 #include "woods.inc"
 #include "vase.inc"
+#include "complexObject.inc"
 
-camera {
-    location <0, 3, -4>
-    look_at  <0, 1,  2>
-}
+  camera {
+    angle 50
+    location <2, 10, -30>
+    look_at <0, 1, 0>
+  }
 
 
-vase
-
+//vase
+complexObject
 
 light_source {
     <10, 10, -10> // <x, y, z>
@@ -24,7 +26,7 @@ light_source {
     jitter
 }
 
-plane { <0, 1, 0>, -1
+plane { <0, 1, 0>, 0
     pigment {
       checker color Red, color Blue
     }
