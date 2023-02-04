@@ -10,13 +10,16 @@
 
   camera {
     angle 50
-    location <2, 10, -30>
+    location <2, 20, -30>
     look_at <0, 1, 0>
   }
 
 
 //vase
-complexObject
+object{
+  complexObject
+  rotate <0,-25,0>
+}
 
 light_source {
     <10, 10, -10> // <x, y, z>
@@ -28,7 +31,7 @@ light_source {
 
 plane { <0, 1, 0>, 0
     pigment {
-      checker color Red, color Blue
+      checker color Magenta, color Blue
     }
 }
 

@@ -1,3 +1,4 @@
+#include "pencil.inc"
 #declare complexObject = 
 union{
     merge{
@@ -11,7 +12,7 @@ union{
                 pigment { 
                     color White transmit 1// <red, green, blue, filter, transmit>
                 }
-                scale 1.0001
+                scale <2, 2, 2> // <x, y, z>
             }
         }
         difference {
@@ -34,87 +35,142 @@ union{
                 color White transmit 0.8
             }
         }
-         lathe { 
-            cubic_spline 8,
-            <-30,8.5>,<0,2.5>, <4,6.5>, <3,8.5>, <3.5,11.75>, <4,12.25>,<4,12>,<4,20>
-            texture{pigment{color White transmit 0}}
-        }
+
+      scale <1.0, 1.0, 1.5> // <x, y, z>
     }
+  lathe { 
+    cubic_spline 8,
+    <0,9>,<4,2.5>,<4,7> ,<3.25,9.5>,  <3.5,10.5>, <3.75,10.75>,<3.75,10.75>,<4,19>
+    texture{pigment{color White transmit 0.8}}
+    scale <0.3, 0.3, 0.3> // <x, y, z>
+    translate <4, 2, 0.1> // <x, y, z>
+  }
+  union{
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,0,60>
+      translate <4.1,3.2,0>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,10,60>
+      translate <4,3.2,0>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,-10,110>
+      translate <5,3.2,0>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,-11,110>
+      translate <4.7,3.2,-0.4>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,-10,100>
+      translate <5,3.2,-0.3>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,9,100>
+      translate <4.65,3.2,0.8>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,-18,110>
+      translate <5,3.2,0>
+    }
+    object{
+      hexagonalPencil
+      scale <0.4, 0.2, 0.2> // <x, y, z>
+      rotate <0,-20,110>
+      translate <4.7,3.2,-0.4>
+    }
+    translate <-0.5,0,0>
+  }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <-0.4,0.5,0.5>,
+    0.45
     pigment { 
-        Black
+        Red transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <-0.4,0.5,-0.5>,
+    0.45
     pigment { 
-        Black
+        Blue transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <0.4,0.5,01>,
+    0.45
     pigment { 
-        Black
+        Green transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <0.4,0.5,0>,
+    0.45
     pigment { 
-        Black
+        DarkBrown transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <1.2,0.5,0.7>,
+    0.45
     pigment { 
-        Black
+        DarkGreen transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <0.4,0.5,-1>,
+    0.45
     pigment { 
-        Black
+        Blue transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <1.9,0.5,1>,
+    0.45
     pigment { 
-        Black
+        DarkGreen transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <2.3,0.5,0.2>,
+    0.45
     pigment { 
-        Black
+        DarkGreen transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <1.3,0.5,-1>,
+    0.45
     pigment { 
-        Black
+        Brown transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <1.4,0.5,-0.1>,
+    0.45
     pigment { 
-        Black
+        Blue transmit 0.5
     }
   }
   sphere{
-    <0,0.5,0>,
-    0.5
+    <2.1,0.5,-1>,
+    0.45
     pigment { 
-        Black
+        DarkBrown transmit 0.5
     }
   }
 };
