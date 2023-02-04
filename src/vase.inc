@@ -1,18 +1,24 @@
-#declare vase = 
-
-cone {
-    <0, 1, 2>, 2 // <x, y, z>, center & radius of one end
-    <0, 5, 2>, 0.25 // <x, y, z>, center & radius of the other end
+#declare vase = sor {
+    14,  // number of points
+    <1.0, 0.0>,
+    <2.0, 1.0>,
+    <2.5, 2.0>,
+    <2.4, 2.7>,
+    <2.0, 3.4>,
+    <1.5, 4.0>,
+    <1.1, 4.5>,
+    <0.9, 5.0>,
+    <0.7, 5.5>,
+    <0.5, 6.0>,
+    <0.4, 6.5>,
+    <0.3, 7.0>,
+    <0.3, 7.5>,
+    <0.2, 8.0>
+    open
     texture {
-        
         pigment { 
-            color Red // <red, green, blue, filter, transmit>
+            color Red
         }
-        finish {
-            phong 0.25
-            reflection { 
-                0.00 metallic 0.00
-            }
-        } 
     }
+    hollow on
 }

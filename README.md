@@ -25,7 +25,7 @@ sudo apt update && sudo apt install povray
 
 To render the file (`src/main.png`), run:
 ```bash
-povray src/main.ini
+bash run.sh
 ```
 
 # Extra information
