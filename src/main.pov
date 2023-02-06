@@ -26,7 +26,10 @@ plane { <0, 0, 1>, 6
 
 // OBJECTS
 vase  // designed in 460x815px
-// complexObject
+// object{  // designed in 1024x768px
+//   complexObject
+//   rotate <0,-25,0>
+// }
 
 
 // LIGHTS
