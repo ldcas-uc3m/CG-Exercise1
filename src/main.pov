@@ -13,20 +13,20 @@
 // ROOM
 plane { <0, 1, 0>, 0
     pigment {
-      checker color Red, color Blue
+      checker color Gray, color White
     }
 }
 
 plane { <0, 0, 1>, 6
     pigment {
-      checker color Yellow, color Blue
+      checker color Gray, color White
     }
 }
 
 
 // OBJECTS
-vase
-complexObject
+vase  // designed in 460x815px
+// complexObject
 
 
 // LIGHTS
@@ -41,6 +41,6 @@ light_source {
 
 // CAMERA
 camera {
-    location <0, 2, -4>
+    location <0, 2, -7>
     look_at  <0, 2,  0>
 }
