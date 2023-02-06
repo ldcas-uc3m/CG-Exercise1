@@ -15,7 +15,7 @@ plane { <0, 1, 0>, 0
     pigment {
       checker color Gray, color White
     }
-}
+  }
 
 plane { <0, 0, 1>, 6
     pigment {
@@ -40,7 +40,15 @@ light_source {
 
 
 // CAMERA
+// luisda's camera
 camera {
     location <0, 2, -7>
     look_at  <0, 2,  0>
-}
+  }
+
+// cia's camera
+// camera {
+//     angle 50
+//     location <2, 20, -30>
+//     look_at <0, 1, 0>
+// }
