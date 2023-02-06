@@ -25,7 +25,7 @@ plane { <0, 0, 1>, 6
 
 
 // OBJECTS
-vase
+vase  // designed in 460x815px
 // complexObject
 
 
@@ -41,6 +41,6 @@ light_source {
 
 // CAMERA
 camera {
-    location <-2, 2, -7>
-    look_at  <-2, 2,  0>
+    location <0, 2, -7>
+    look_at  <0, 2,  0>
 }
