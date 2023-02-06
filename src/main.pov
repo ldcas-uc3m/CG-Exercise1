@@ -41,6 +41,6 @@ light_source {
 
 // CAMERA
 camera {
-    location <0, 5, -10>
-    look_at  <0, 4,  0>
+    location <-2, 2, -7>
+    look_at  <-2, 2,  0>
 }
