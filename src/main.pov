@@ -25,8 +25,13 @@ plane { <0, 0, 1>, 6
 
 
 // OBJECTS
-vase  // designed in 460x815px
-// complexObject
+object {
+    vase
+}
+// object {
+//   complexObject
+//   rotate <0,-25,0>
+// }
 
 
 // LIGHTS
@@ -42,9 +47,9 @@ light_source {
 // CAMERA
 // luisda's camera
 camera {
-    location <0, 2, -7>
-    look_at  <0, 2,  0>
-  }
+    location <0, 3, -8>
+    look_at  <0, 3,  0>
+}
 
 // cia's camera
 // camera {
