@@ -1,3 +1,11 @@
+/*
+  This object was designed for a 460x815px image.
+  As POV-Ray's coordinate system (for some FUCKING reason)
+  depends on the output image size, if you want to use this
+  in any other image size, you must use transformations to
+  to keep the object's shape.
+*/
+
 #declare outer_vase = sor {
     6,  // number of points
     <0.0, -0.5>,
@@ -8,7 +16,7 @@
     <0.3, 4.3>
     texture {
         pigment {
-        color Red transmit 0.2
+            color Red transmit 0.2
         }
     }
     hollow off
@@ -27,7 +35,7 @@
         open  // no caps
         texture {
             pigment {
-            color Red transmit 0.3
+                color Red transmit 0.3
             }
         }
         hollow on
@@ -38,7 +46,7 @@
             <0, 3, 0>, 2.98 // <x, y, z>, radius
             texture {
                 pigment {
-                color Red transmit 0.2
+                    color Red transmit 0.2
                 }
             }
             hollow on
