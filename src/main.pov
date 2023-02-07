@@ -25,7 +25,9 @@ plane { <0, 0, 1>, 6
 
 
 // OBJECTS
-vase
+object {
+    vase
+}
 // object {
 //   complexObject
 //   rotate <0,-25,0>
@@ -44,14 +46,14 @@ light_source {
 
 // CAMERA
 // luisda's camera
-// camera {
-//     location <0, 2, -7>
-//     look_at  <0, 2,  0>
-//   }
+camera {
+    location <0, 3, -8>
+    look_at  <0, 3,  0>
+}
 
 // cia's camera
-camera {
-    angle 50
-    location <2, 20, -30>
-    look_at <0, 1, 0>
-}
+// camera {
+//     angle 50
+//     location <2, 20, -30>
+//     look_at <0, 1, 0>
+// }
