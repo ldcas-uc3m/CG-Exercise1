@@ -32,7 +32,7 @@ object {
 
 // LIGHTS
 light_source {
-    <0, 10, 5> // <x, y, z>
+    <0, 5, 5> // <x, y, z>
     color <1.0, 1.0,  1.0> // <red, green, blue>
     area_light <5, 0, 0>, <0, 0, 5>, 5, 5 // <x, y, z>, <x, y, z>, size 1, size 2
     adaptive 1
@@ -43,8 +43,8 @@ light_source {
 // CAMERA
 // luisda's camera
 camera {
-    location <0, 3, -8>
-    look_at  <0, 3,  0>
+    location <0, 1.5, -5.5>
+    look_at  <0, 1.5,  0>
 }
 
 // cia's camera
