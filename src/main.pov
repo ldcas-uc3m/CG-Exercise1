@@ -1,10 +1,6 @@
 #include "colors.inc"
-#include "stones.inc"
-#include "textures.inc"
 #include "shapes.inc"
 #include "glass.inc"
-#include "metals.inc"
-#include "woods.inc"
 
 #include "vase.inc"
 #include "complexObject.inc"
@@ -36,7 +32,7 @@ object {
 
 // LIGHTS
 light_source {
-    <10, 10, -10> // <x, y, z>
+    <0, 10, 5> // <x, y, z>
     color <1.0, 1.0,  1.0> // <red, green, blue>
     area_light <5, 0, 0>, <0, 0, 5>, 5, 5 // <x, y, z>, <x, y, z>, size 1, size 2
     adaptive 1

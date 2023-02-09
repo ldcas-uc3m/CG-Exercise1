@@ -16,8 +16,18 @@
     <0.24, 8.6>
     texture {
         pigment {
-            color Red transmit 0.2
+            color Red filter 0.8
         }
+    }
+    finish {
+        ambient 0
+        diffuse 0.1
+        reflection .20
+        specular 1
+        roughness 0.001
+	}		
+    interior {
+        ior 1.3
     }
     hollow off
 }
@@ -43,8 +53,18 @@
         open  // no caps
         texture {
             pigment {
-                color Red transmit 0.3
+                color Red filter 1
             }
+        }
+        finish {
+            ambient 0
+            diffuse 0.1
+            reflection .20
+            specular 1
+            roughness 0.001
+        }
+        interior {
+            ior 1.3
         }
         hollow on
         // translate <0, -0.5, 0> // <x, y, z>
@@ -63,8 +83,18 @@
             <0, 1.70, 0>, 1.45 // <x, y, z>, radius
             texture {
                 pigment {
-                    color Red transmit 0.2
+                    color Red filter 1
                 }
+            }
+            finish {
+                ambient 0
+                diffuse 0.1
+                reflection .2
+                specular 1
+                roughness 0.001
+            }
+            interior {
+                ior 1.3
             }
             hollow on
         }
