@@ -15,6 +15,7 @@
 }
 
 #declare vase_texture = texture {
+    Glass3
     pigment {
         color Red filter 1
     }
@@ -47,29 +48,18 @@
 }
 
 
-#declare inner_vase = sor {
-    6,  // number of points
-    <0.0, -0.5>,
-    <0.9, 0.0>,
-    <1.7, 0.9>,
-    <0.6, 2.0>,
-    <0.3, 3.4>,
-    <0.2, 4.3>
-    open
-    hollow on
-}
-
-
 #declare full_vase = difference {
     object { outer_vase }
-    object { inner_vase }
+    object {
+        outer_vase
+        scale <0.9, 1.0, 0.9> // <x, y, z>
+    }
 }
 
 
-#declare butt = difference {
-    object{outer_vase}
+#declare cutting_box = merge {
     sphere {  // cutting sphere
-        <0, 2.5, 0>, 2.5 // <x, y, z>, radius
+        <0, 2.4, 0>, 2.5 // <x, y, z>, radius
     }
     box {
         <-3, 0.3, -3>, <3, 3, 3> // <x, y, z> near lower left corner, <x, y, z> far upper right corner
@@ -77,9 +67,14 @@
     }
 }
 
+#declare butt = difference {
+    object{outer_vase}
+    object{cutting_box}
+}
+
 
 #declare top_vase = difference {
-    object{ 
+    object { 
         full_vase
     }
     object { 
@@ -95,15 +90,15 @@
     object {
         top_vase
         texture { vase_texture }
-        finish { vase_finnish }
-        interior { vase_interior }
+        // finish { vase_finnish }
+        // interior { vase_interior }
     }
 
     // bottom part
     object {
         butt
         texture { butt_texture }
-        finish { vase_finnish }
-        interior { vase_interior }
+        // finish { vase_finnish }
+        // interior { vase_interior }
     }
 }
