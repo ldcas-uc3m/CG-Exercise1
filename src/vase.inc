@@ -8,41 +8,32 @@
 
 #include "textures.inc"
 
+// TEXTURES
 
-#declare butt_texture =
-    texture {
-        Glass3
+#declare butt_texture = texture {
+    Glass3
+}
+
+#declare vase_texture = texture {
+    pigment {
+        color Red filter 1
     }
+}
+
+#declare vase_finnish = finish {
+    ambient 0
+    diffuse 0.1
+    reflection .20
+    specular 1
+    roughness 0.001
+}
+
+#declare vase_interior = interior {
+    ior 1.3
+}
 
 
-#declare out_vase_texture =
-    texture {
-        pigment {
-            color Red filter 0.8
-        }
-    }
-
-#declare in_vase_texture =
-    texture {
-        pigment {
-            color Red filter 1
-        }
-    }
-
-#declare vase_finnish =
-    finish {
-        ambient 0
-        diffuse 0.1
-        reflection .20
-        specular 1
-        roughness 0.001
-	}
-
-#declare vase_interior =
-    interior {
-        ior 1.3
-    }
-
+// OBJECTS
 
 #declare outer_vase = sor {
     6,  // number of points
@@ -56,38 +47,6 @@
 }
 
 
-#declare old_inner_vase = union {
-    sor {
-        6,  // number of points
-        <1.1, 0.0>,
-        <1.3, 0.3>,
-        <1.7, 0.9>,
-        <0.6, 2.0>,
-        <0.3, 3.4>,
-        <0.2, 4.3>
-        open  // no caps
-        texture { in_vase_texture }
-        finish { vase_finnish }
-        interior { vase_interior }
-        hollow on
-        // translate <0, -0.5, 0> // <x, y, z>
-    }
-
-    difference {  // bottom part
-        sphere {
-            <0, 3, 0>, 2.98 // <x, y, z>, radius
-            texture { in_vase_texture }
-            finish { vase_finnish }
-            interior { vase_interior }
-            hollow on
-        }
-        box {  // to cut the top of the sphere
-            <-5, 0.33, 5>, <5, 9, -5> // <x, y, z> near lower left corner, <x, y, z> far upper right corner
-        }
-    }
-}
-
-
 #declare inner_vase = sor {
     6,  // number of points
     <0.0, -0.5>,
@@ -97,57 +56,54 @@
     <0.3, 3.4>,
     <0.2, 4.3>
     open
-    texture { out_vase_texture }
-    finish { vase_finnish }
-    interior { vase_interior }
     hollow on
 }
 
 
 #declare full_vase = difference {
-    object {
-        outer_vase
-        texture { out_vase_texture }
-        finish { vase_finnish }
-        interior { vase_interior }
-    }
-    object {
-        inner_vase
-        texture { in_vase_texture }
-        finish { vase_finnish }
-        interior { vase_interior }
-    }
+    object { outer_vase }
+    object { inner_vase }
 }
 
 
 #declare butt = difference {
     object{outer_vase}
     sphere {  // cutting sphere
-        <0, 2.4, 0>, 2.5 // <x, y, z>, radius
+        <0, 2.5, 0>, 2.5 // <x, y, z>, radius
     }
     box {
-        <-3, 2.2, -3>, <3, 3, 3> // <x, y, z> near lower left corner, <x, y, z> far upper right corner
+        <-3, 0.3, -3>, <3, 3, 3> // <x, y, z> near lower left corner, <x, y, z> far upper right corner
         
     }
-
-    texture { butt_texture }
-    finish { vase_finnish }
-    interior { vase_interior }
 }
 
 
-#declare old_vase = difference {
-    object{outer_vase}
-    object{inner_vase}
+#declare top_vase = difference {
+    object{ 
+        full_vase
+    }
+    object { 
+        butt
+        // bigger to avoid surface overlapping
+        scale <1.001, 1.001, 1.001> 
+    }
 }
-
 
 #declare vase = union {
     // top part
-    difference {
-        object{full_vase}
-        object{butt}
+    
+    object {
+        top_vase
+        texture { vase_texture }
+        finish { vase_finnish }
+        interior { vase_interior }
     }
+
     // bottom part
-    object{butt}
+    object {
+        butt
+        texture { butt_texture }
+        finish { vase_finnish }
+        interior { vase_interior }
+    }
 }

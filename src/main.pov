@@ -25,12 +25,12 @@ object {
     scale<0.95,1,0.95>
     translate <1.7,0,0.4>
 }
-object {
-    complexObject
-    scale <0.42,0.18,0.42>
-    rotate <0,-30,0>
-    translate <-2.1,0,-1.5>
-}
+// object {
+//     complexObject
+//     scale <0.42,0.18,0.42>
+//     rotate <0,-30,0>
+//     translate <-2.1,0,-1.5>
+// }
 
 
 // LIGHTS
