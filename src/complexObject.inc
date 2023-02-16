@@ -45,7 +45,7 @@
             }
         }
 
-      scale <1.0, 1.0, 1.5> // <x, y, z>
+      scale <1.0, 0.7, 1.5> // <x, y, z>
     }
     lathe {  // yoghurt vase
         cubic_spline 8,
@@ -62,8 +62,8 @@
                 color White transmit 0.8
             }
         }
-        scale <0.3, 0.3, 0.3> // <x, y, z>
-        translate <4, 2, 0.1> // <x, y, z>
+        scale <0.35, 0.32, 0.35> // <x, y, z>
+        translate <4, 1, 0.1> // <x, y, z>
     }
     union {  // pencils
         object {
@@ -114,82 +114,82 @@
             rotate <0,-20,110>
             translate <4.7,3.2,-0.4>
         }
-        translate <-0.5,0,0>
+        translate <-0.5,-0.87,0>
     }
     // colored spheres
     sphere {
         <-0.4, 0.5, 0.5>,
-        0.45  // radius
+        0.4  // radius
         pigment { 
             Red transmit 0.5
         }
     }
     sphere {
         <-0.4, 0.5, -0.5>,
-        0.45
+        0.4
         pigment { 
             Blue transmit 0.5
         }
     }
     sphere {
         <0.4, 0.5, 01>,
-        0.45
+        0.4
         pigment { 
             Green transmit 0.5
         }
     }
     sphere {
         <0.4, 0.5, 0>,
-        0.45
+        0.4
         pigment { 
             DarkBrown transmit 0.5
         }
     }
     sphere {
         <1.2, 0.5, 0.7>,
-        0.45
+        0.4
         pigment { 
             DarkGreen transmit 0.5
         }
     }
     sphere {
         <0.4, 0.5, -1>,
-        0.45
+        0.4
         pigment { 
             Blue transmit 0.5
         }
     }
     sphere {
         <1.9, 0.5, 1>,
-        0.45
+        0.4
         pigment { 
             DarkGreen transmit 0.5
         }
     }
     sphere {
         <2.3, 0.5, 0.2>,
-        0.45
+        0.4
         pigment { 
             DarkGreen transmit 0.5
         }
     }
     sphere {
         <1.3, 0.5, -1>,
-        0.45
+        0.4
         pigment { 
             Brown transmit 0.5
         }
     }
     sphere {
         <1.4, 0.5, -0.1>,
-        0.45
+        0.4
         pigment { 
             Blue transmit 0.5
         }
     }
     sphere {
         <2.1, 0.5, -1>,
-        0.45
+        0.4
         pigment { 
             DarkBrown transmit 0.5
         }

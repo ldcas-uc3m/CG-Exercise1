@@ -13,7 +13,7 @@ plane { <0, 1, 0>, 0
     }
   }
 
-plane { <0, 0, 1>, 6
+plane { <0, 0, 1>, 3
     pigment {
       checker color Gray, color White
     }
@@ -22,12 +22,16 @@ plane { <0, 0, 1>, 6
 
 // OBJECTS
 object {
-    vase
+  vase
+  scale<0.95,1,0.95>
+  translate <1.7,0,0.4>
 }
-// object {
-//   complexObject
-//   rotate <0,-25,0>
-// }
+object {
+  complexObject
+  scale <0.42,0.18,0.42>
+  rotate <0,-30,0>
+  translate <-2.1,0,-1.5>
+}
 
 
 // LIGHTS
