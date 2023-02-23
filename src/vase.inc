@@ -90,15 +90,15 @@
     object {
         top_vase
         texture { vase_texture }
-        // finish { vase_finnish }
-        // interior { vase_interior }
+        finish { vase_finnish }
+        interior { vase_interior }
     }
 
     // bottom part
     object {
         butt
         texture { butt_texture }
-        // finish { vase_finnish }
+        finish { vase_finnish }
         // interior { vase_interior }
     }
 }

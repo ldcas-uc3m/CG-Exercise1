@@ -1,3 +1,7 @@
+/*
+By Luis Daniel Casais Mezquida and Lucía María Moya Sans
+*/
+
 #include "colors.inc"
 #include "shapes.inc"
 
@@ -8,14 +12,24 @@
 // ROOM
 plane { <0, 1, 0>, 0
     pigment {
-        checker color Gray, color White
+        color Gray
     }
+    finish {
+        reflection 0.4
+    }
+
   }
 
 plane { <0, 0, 1>, 3
     pigment {
-        checker color Gray, color White
+        color White
     }
+    finish {
+        reflection 0
+        ambient 0.8
+        diffuse 0.1
+    }
+    
 }
 
 
@@ -37,7 +51,7 @@ object {
 light_source {
     <1, 5, 2.5> // <x, y, z>
     color <1.0, 1.0,  1.0> // <red, green, blue>
-    area_light <5, 0, 0>, <0, 0, 5>, 5, 5 // <x, y, z>, <x, y, z>, size 1, size 2
+    area_light <10, 0, 0>, <0, 0, 10>, 5, 5 // <x, y, z>, <x, y, z>, size 1, size 2
     adaptive 1
     jitter
 }
