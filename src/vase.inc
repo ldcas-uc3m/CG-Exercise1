@@ -45,6 +45,7 @@
     <0.4, 3.4>,
     <0.3, 4.3>
     hollow off
+    sturm
 }
 
 
@@ -99,6 +100,6 @@
         butt
         texture { butt_texture }
         finish { vase_finnish }
-        // interior { vase_interior }
+        interior { vase_interior }
     }
 }

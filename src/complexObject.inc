@@ -57,6 +57,7 @@
         <3.75, 10.75>,
         <3.75, 10.75>,
         <4.00, 19.00>
+        sturm
         texture {
             pigment {
                 color White transmit 0.8

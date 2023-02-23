@@ -12,7 +12,7 @@ By Luis Daniel Casais Mezquida and Lucía María Moya Sans
 // ROOM
 plane { <0, 1, 0>, 0
     pigment {
-        color Gray
+        color Black
     }
     finish {
         reflection 0.4
@@ -26,7 +26,7 @@ plane { <0, 0, 1>, 3
     }
     finish {
         reflection 0
-        ambient 0.8
+        ambient 0.3
         diffuse 0.1
     }
     
@@ -37,13 +37,13 @@ plane { <0, 0, 1>, 3
 object {
     vase
     scale<0.95,1,0.95>
-    translate <1.7,0,0.4>
+    translate <1.7,0.000001,0.4>
 }
 object {
     complexObject
     scale <0.42,0.18,0.42>
     rotate <0,-30,0>
-    translate <-2.1,0,-1.5>
+    translate <-2.1,0.0000001,-1.5>
 }
 
 
@@ -51,7 +51,7 @@ object {
 light_source {
     <1, 5, 2.5> // <x, y, z>
     color <1.0, 1.0,  1.0> // <red, green, blue>
-    area_light <10, 0, 0>, <0, 0, 10>, 5, 5 // <x, y, z>, <x, y, z>, size 1, size 2
+    area_light <5, 0, 0>, <0, 0, 5>, 5, 5 // <x, y, z>, <x, y, z>, size 1, size 2
     adaptive 1
     jitter
 }
