@@ -4,7 +4,7 @@ Computer Graphics 22/23
 Bachelor's Degree in Computer Science and Engineering, grp. 89  
 Universidad Carlos III de Madrid
 
-# Project description
+## Project description
 Model the objects shown in the following image by using POV-Ray:
 
 ![View 1](img/view_1.jpg)  
@@ -13,7 +13,12 @@ Model the objects shown in the following image by using POV-Ray:
 
 It is not required to represent with high fidelity the textures and properties of the different objects.
 
-# Installation and execution
+## Result
+The program generates the following image:
+
+![Result](img/result.png)
+
+## Installation and execution
 
 First install [POV-Ray](https://github.com/POV-Ray/povray/tree/3.7-stable).
 
